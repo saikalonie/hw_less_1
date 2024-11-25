@@ -92,7 +92,6 @@ def hero_action(hero):
 mage = Mage('Сесилион')
 warrior = Warrior('Циклоп')
 
-    # Проверяем действия героев
 hero_action(mage)
-print()  # Разделитель для вывода
+print()
 hero_action(warrior)
