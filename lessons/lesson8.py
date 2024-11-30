@@ -60,7 +60,7 @@ def get_user_with_grades():
     cursor.execute('''
         SELECT users.fio, users.age, grades.subject, grades.grade
         FROM users
-        INNER JOIN grades ON users.userid = grades.userid
+        RIGHT JOIN grades ON users.userid = grades.userid
     ''')
 
     rows = cursor.fetchall()
@@ -74,6 +74,8 @@ create_table()
 
 add_user('Ardager', 25)
 add_user('Krampoos', 25)
+add_user('Anarbekova', 19)
+
 
 add_grade(1, 'Алгебра', 3)
 add_grade(1, 'Русский', 2)
